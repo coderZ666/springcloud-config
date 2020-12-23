@@ -16,7 +16,7 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://192.168.0.105:7001/eureka,http://192.168.0.105:7002/eureka
-testbus: zwx05
+testbus: zwx06
 ---
 server: 
   port: 8204
@@ -31,7 +31,7 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
-testbus: zwx04
+testbus: zwx06
 ---
 server: 
   port: 8203
@@ -46,4 +46,4 @@ eureka:
   client: 
     service-url: 
       defaultZone: http://192.168.0.105:7001/eureka,http://192.168.0.105:7002/eureka
-testbus: zwx05
+testbus: zwx06
