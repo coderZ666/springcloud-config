@@ -11,7 +11,8 @@ spring:
     name: cloud-config-client03
 eureka: 
   instance: 
-    hostname: 192.168.0.105-dev
+    instance-id: devEnvironmentLinux
+    prefer-ip-address: true
   client: 
     service-url: 
       defaultZone: http://192.168.0.105:7001/eureka,http://192.168.0.105:7002/eureka
@@ -25,8 +26,24 @@ spring:
     name: cloud-config-client03
 eureka: 
   instance: 
-    hostname: 192.168.0.105-dev
+    instance-id: testEnvironmentWindows
+    prefer-ip-address: true
   client: 
     service-url: 
       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
 testbus: zwx04
+---
+server: 
+  port: 8203
+spring:
+  profiles: prod
+  application: 
+    name: cloud-config-client03
+eureka: 
+  instance: 
+    instance-id: devEnvironmentWindows
+    prefer-ip-address: true
+  client: 
+    service-url: 
+      defaultZone: http://192.168.0.105:7001/eureka,http://192.168.0.105:7002/eureka
+testbus: zwx05
