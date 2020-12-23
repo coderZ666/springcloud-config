@@ -11,7 +11,7 @@ spring:
     name: cloud-config-client03
 eureka: 
   instance: 
-    instance-id: devEnvironmentLinux
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}:@project.version@
     prefer-ip-address: true
   client: 
     service-url: 
@@ -26,7 +26,7 @@ spring:
     name: cloud-config-client03
 eureka: 
   instance: 
-    instance-id: testEnvironmentWindows
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}:@project.version@
     prefer-ip-address: true
   client: 
     service-url: 
@@ -41,7 +41,7 @@ spring:
     name: cloud-config-client03
 eureka: 
   instance: 
-    instance-id: devEnvironmentWindows
+    instance-id: ${spring.cloud.client.ipAddress}:${spring.application.name}:${server.port}:@project.version@
     prefer-ip-address: true
   client: 
     service-url: 
